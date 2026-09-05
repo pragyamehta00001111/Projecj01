@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0" />
+  <title>Aaro Aquaguard | Pure. Premium. Powerful.</title>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <style>
+    :root {
+      --primary: #1e3a5f;
+      --accent: #2563eb;
+      --dark: #0f172a;
+      --bg: #f8fafc;
+      --card-bg: #ffffff;
+      --border: #e2e8f0;
+      --text-muted: #64748b;
+      --whatsapp: #25d366;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      -webkit-tap-highlight-color: transparent;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--dark);
+      line-height: 1.5;
+    }
+
+    header {
+      position: sticky;
+      top: 0;
+      background: rgba(255, 255, 255, 0.96);
+      backdrop-filter: blur(8px);
+      border-bottom: 1px solid var(--border);
+      z-index: 100;
+    }
+
+    .nav-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.85rem 1rem;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: var(--primary);
+      text-decoration: none;
+    }
+
+    .logo span {
+      color: var(--accent);
+    }
+
+    .btn-call {
+      background: var(--primary);
+      color: #fff;
+      padding: 0.5rem 1rem;
+      border-radius: 6px;
+      text-decoration: none;
+      font-size: 0.85rem;
+      font-weight: 600;
+      white-space: nowrap;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 3rem 1rem 2rem;
+      background: linear-gradient(180deg, #eef2f6 0%, var(--bg) 100%);
+    }
+
+    .hero h1 {
+      font-size: 2rem;
+      line-height: 1.2;
+      color: var(--primary);
+      margin-bottom: 0.5rem;
+    }
+
+    .hero p.tagline {
+      font-size: 1rem;
+      color: var(--text-muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .badges {
+      display: flex;
+      justify-content: center;
+      gap: 0.5rem;
+      flex-wrap: wrap;
+    }
+
+    .badge {
+      background: #fff;
+      border: 1px solid var(--border);
+      padding: 0.4rem 0.8rem;
+      border-radius: 20px;
+      font-size: 0.75rem;
+      font-weight: 600;
+    }
+
+    .catalog {
+      max-width: 1200px;
+      margin: 1.5rem auto 3rem;
+      padding: 0 1rem;
+    }
+
+    .section-title {
+      font-size: 1.5rem;
+      font-weight: 700;
+      margin-bottom: 1.5rem;
+      text-align: center;
+    }
+
+    .grid {
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+
+    @media (min-width: 600px) {
+      .grid {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
+    @media (min-width: 1024px) {
+      .grid {
+        grid-template-columns: repeat(3, 1fr);
+      }
+    }
+
+    .card {
+      background: var(--card-bg);
+      border-radius: 12px;
+      border: 1px solid var(--border);
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .card-preview {
+      height: 280px;
+      width: 100%;
+      background: #ffffff;
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .card-preview img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      padding: 0.5rem;
+      display: block;
+    }
+
+    .swatch-indicator {
+      position: absolute;
+      top: 0.75rem;
+      right: 0.75rem;
+      background: rgba(255, 255, 255, 0.9);
+      font-size: 0.7rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 4px;
+      border: 1px solid var(--border);
+      z-index: 2;
+    }
+
+    .card-body {
+      padding: 1.25rem;
+      display: flex;
+      flex-direction: column;
+      flex-grow: 1;
+    }
+
+    .series-name {
+      font-size: 0.75rem;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      font-weight: 700;
+      color: var(--accent);
+      margin-bottom: 0.2rem;
+    }
+
+    .model-title {
+      font-size: 1.15rem;
+      font-weight: 700;
+      margin-bottom: 0.75rem;
+    }
+
+    .specs {
+      list-style: none;
+      margin-bottom: 1.25rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .specs li {
+      margin-bottom: 0.35rem;
+    }
+
+    .card-footer {
+      margin-top: auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px solid var(--border);
+      padding-top: 0.85rem;
+    }
+
+    .price {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--primary);
+    }
+
+    .btn-inquire {
+      background: var(--dark);
+      color: #fff;
+      text-decoration: none;
+      padding: 0.5rem 0.9rem;
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+    }
+
+    .whatsapp-float {
+      position: fixed;
+      bottom: 1.25rem;
+      right: 1.25rem;
+      background: var(--whatsapp);
+      color: #fff;
+      padding: 0.75rem 1.2rem;
+      border-radius: 50px;
+      font-size: 0.85rem;
+      font-weight: 700;
+      text-decoration: none;
+      box-shadow: 0 4px 14px rgba(37, 211, 102, 0.4);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 999;
+    }
+
+    footer {
+      background: #fff;
+      border-top: 1px solid var(--border);
+      padding: 2.5rem 1rem 5rem;
+      text-align: center;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="nav-container">
+      <a href="#" class="logo">AARO <span>AQUAGUARD</span></a>
+      <a href="tel:+919876543210" class="btn-call">Call Dealer</a>
+    </div>
+  </header>
+
+  <section class="hero">
+    <h1>Pure. Premium. Powerful.</h1>
+    <p class="tagline">9L Multi-Stage Domestic & Commercial Purification</p>
+    <div class="badges">
+      <div class="badge">9L Internal Storage</div>
+      <div class="badge">Multi-Stage RO+UV</div>
+      <div class="badge">NSF / CE Certified</div>
+    </div>
+  </section>
+
+  <section class="catalog">
+    <h2 class="section-title">Available Models</h2>
+    
+    <div class="grid">
+      <div class="card">
+        <div class="card-preview">
+          <span class="swatch-indicator">Elite Series</span>
+          <img src="1.jpg" alt="Aqua ERA Forest Blue" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="series-name">Aqua ERA Elite</span>
+          <h3 class="model-title">Forest Blue</h3>
+          <ul class="specs">
+            <li>• 9 Litre Storage Tank</li>
+            <li>• Ribbed Front Acrylic Guard</li>
+            <li>• Multi Stage Purification</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">Aqua ERA</span>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Aqua%20ERA%20Forest%20Blue" class="btn-inquire">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <span class="swatch-indicator">Xtreme Series</span>
+          <img src="2.jpg" alt="Blueshell Xtreme Purifier" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="series-name">Blueshell</span>
+          <h3 class="model-title">Xtreme+ Series</h3>
+          <ul class="specs">
+            <li>• Real-Time Digital Display</li>
+            <li>• Multi-Color Dual Finish</li>
+            <li>• NSF & CE Standard Certified</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">Blueshell</span>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Blueshell%20Xtreme" class="btn-inquire">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <span class="swatch-indicator">Silk Series</span>
+          <img src="3.jpg" alt="Aqua ERA Silk Blue" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="series-name">Aqua ERA Silk</span>
+          <h3 class="model-title">Silk Blue</h3>
+          <ul class="specs">
+            <li>• 9L High-Capacity Storage</li>
+            <li>• Smooth Sky Blue Matte Finish</li>
+            <li>• Push-Lever Dispense Spout</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">Aqua ERA</span>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Aqua%20ERA%20Silk%20Blue" class="btn-inquire">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <span class="swatch-indicator">Elite Series</span>
+          <img src="4.jpg" alt="Aqua ERA Urban Grey" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="series-name">Aqua ERA Elite</span>
+          <h3 class="model-title">Urban Grey</h3>
+          <ul class="specs">
+            <li>• 9L Storage Reservoir</li>
+            <li>• Premium Matte Graphite Exterior</li>
+            <li>• LED Status Indicators</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">Aqua ERA</span>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Aqua%20ERA%20Urban%20Grey" class="btn-inquire">Inquire</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="card">
+        <div class="card-preview">
+          <span class="swatch-indicator">Silk Series</span>
+          <img src="5.jpg" alt="Aqua ERA Silk Beige" loading="lazy" />
+        </div>
+        <div class="card-body">
+          <span class="series-name">Aqua ERA Silk</span>
+          <h3 class="model-title">Silk Beige</h3>
+          <ul class="specs">
+            <li>• 9L Internal Tank</li>
+            <li>• Warm Beige & Champagne Accent</li>
+            <li>• Food-Grade Safe Material</li>
+          </ul>
+          <div class="card-footer">
+            <span class="price">Aqua ERA</span>
+            <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20Aqua%20ERA%20Silk%20Beige" class="btn-inquire">Inquire</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <a href="https://wa.me/919876543210?text=Hi,%20I%20am%20interested%20in%20buying%20an%20Aaro%20Aquaguard%20purifier" class="whatsapp-float" target="_blank">
+    WhatsApp Us
+  </a>
+
+  <footer>
+    <p><strong>Aaro Aquaguard Store & Service</strong></p>
+    <p>Sales, Installation & Multi-Stage Filter Support</p>
+  </footer>
+
+</body>
+</html>
