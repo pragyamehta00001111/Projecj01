@@ -1,0 +1,610 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Honest Aqua — RO Sales, Service &amp; Spare Parts, Vadodara</title>
+<meta name="description" content="Domestic &amp; industrial RO, UV, alkaline and copper water purifiers, spare parts, booster pumps, membranes and filter cartridges — sales, repair and AMC in Vadodara. Pan-India delivery." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=IBM+Plex+Mono:wght@500&display=swap" rel="stylesheet" />
+<style>
+  :root{
+    --ink:#0e1f1b;
+    --paper:#f4f7f5;
+    --panel:#ffffff;
+    --teal:#0b6e5f;
+    --teal-deep:#084d43;
+    --steel:#33505c;
+    --copper:#b5651d;
+    --line:#dbe6e2;
+    --muted:#5c7570;
+  }
+  *{box-sizing:border-box;margin:0;padding:0;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--paper);color:var(--ink);font-family:'Inter',sans-serif;line-height:1.55;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3{font-family:'Space Grotesk',sans-serif;color:var(--ink);letter-spacing:-0.01em;}
+  .mono{font-family:'IBM Plex Mono',monospace;}
+  a{color:inherit;}
+  img,svg{display:block;max-width:100%;}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 1.5rem;}
+  :focus-visible{outline:3px solid var(--copper);outline-offset:2px;}
+
+  header{position:sticky;top:0;z-index:50;background:rgba(244,247,245,0.92);backdrop-filter:blur(10px);border-bottom:1px solid var(--line);}
+  .nav{display:flex;align-items:center;justify-content:space-between;padding:0.9rem 0;}
+  .brand{display:flex;align-items:center;gap:0.6rem;font-family:'Space Grotesk',sans-serif;font-weight:700;font-size:1.15rem;text-decoration:none;color:var(--ink);}
+  .brand-mark{width:30px;height:30px;flex-shrink:0;}
+  .nav-actions{display:flex;gap:0.6rem;}
+  .btn{display:inline-flex;align-items:center;gap:0.4rem;padding:0.55rem 1rem;border-radius:8px;font-size:0.85rem;font-weight:600;text-decoration:none;border:1px solid transparent;cursor:pointer;transition:transform 0.15s ease;}
+  .btn:hover{transform:translateY(-1px);}
+  .btn-solid{background:var(--teal);color:#fff;}
+  .btn-solid:hover{background:var(--teal-deep);}
+  .btn-line{border-color:var(--ink);color:var(--ink);}
+  .btn-line:hover{background:var(--ink);color:#fff;}
+
+  .hero{padding:3.5rem 0 3rem;}
+  .hero-grid{display:grid;grid-template-columns:1fr;gap:2.5rem;align-items:center;}
+  @media(min-width:860px){.hero-grid{grid-template-columns:1.05fr 1fr;}}
+  .eyebrow-note{font-size:0.85rem;color:var(--muted);margin-bottom:0.9rem;}
+  .hero h1{font-size:2.35rem;line-height:1.14;margin-bottom:1rem;max-width:16ch;}
+  @media(min-width:640px){.hero h1{font-size:2.85rem;}}
+  .hero p.lede{font-size:1.05rem;color:var(--steel);max-width:46ch;margin-bottom:1.6rem;}
+  .hero-ctas{display:flex;flex-wrap:wrap;gap:0.7rem;margin-bottom:1.8rem;}
+  .stat-row{display:flex;gap:1.6rem;flex-wrap:wrap;border-top:1px solid var(--line);padding-top:1.1rem;}
+  .stat b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.3rem;}
+  .stat span{font-size:0.8rem;color:var(--muted);}
+
+  .hero-photo{background:var(--panel);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative;}
+  .hero-photo img{width:100%;height:340px;object-fit:cover;object-position:center 25%;}
+  .hero-photo .cap{position:absolute;bottom:0;left:0;right:0;background:linear-gradient(0deg,rgba(14,31,27,0.78),transparent);color:#fff;padding:1.6rem 1.1rem 0.9rem;font-size:0.85rem;}
+  .hero-photo .cap b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.05rem;margin-bottom:0.1rem;}
+
+  section{padding:3rem 0;}
+  .section-head{max-width:58ch;margin-bottom:2rem;}
+  .section-head p{color:var(--muted);}
+  .kicker{font-size:0.8rem;color:var(--teal);font-weight:600;margin-bottom:0.4rem;}
+  h2{font-size:1.7rem;}
+
+  .services{background:var(--panel);border-top:1px solid var(--line);border-bottom:1px solid var(--line);}
+  .service-grid{display:grid;grid-template-columns:1fr;gap:1.4rem;}
+  @media(min-width:640px){.service-grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:960px){.service-grid{grid-template-columns:repeat(4,1fr);}}
+  .service-card{border-top:2px solid var(--ink);padding-top:0.9rem;}
+  .service-card svg{width:26px;height:26px;margin-bottom:0.8rem;color:var(--teal);}
+  .service-card h3{font-size:1.02rem;margin-bottom:0.4rem;}
+  .service-card p{font-size:0.88rem;color:var(--muted);}
+  .service-card .tag{display:inline-block;margin-top:0.6rem;font-family:'IBM Plex Mono',monospace;font-size:0.75rem;color:var(--copper);}
+
+  .filter-tabs{display:flex;gap:0.5rem;flex-wrap:wrap;margin-bottom:1.8rem;}
+  .filter-tab{border:1px solid var(--line);background:var(--panel);padding:0.45rem 0.9rem;border-radius:20px;font-size:0.82rem;font-weight:600;cursor:pointer;color:var(--steel);}
+  .filter-tab.active{background:var(--ink);color:#fff;border-color:var(--ink);}
+
+  .grid{display:grid;grid-template-columns:1fr;gap:1.3rem;}
+  @media(min-width:640px){.grid{grid-template-columns:repeat(2,1fr);}}
+  @media(min-width:980px){.grid{grid-template-columns:repeat(3,1fr);}}
+  .card{background:var(--panel);border:1px solid var(--line);border-radius:12px;overflow:hidden;display:flex;flex-direction:column;}
+  .card-visual{height:200px;background:#fff;position:relative;border-bottom:1px solid var(--line);}
+  .card-visual img{width:100%;height:100%;object-fit:contain;padding:0.6rem;}
+  .card-visual .swatch-tag{position:absolute;top:0.7rem;left:0.9rem;font-family:'IBM Plex Mono',monospace;font-size:0.68rem;color:var(--muted);background:rgba(255,255,255,0.85);padding:0.1rem 0.4rem;border-radius:4px;}
+  .card-body{padding:1.15rem 1.2rem 1.3rem;display:flex;flex-direction:column;flex-grow:1;}
+  .series-name{font-size:0.72rem;text-transform:uppercase;letter-spacing:0.06em;font-weight:600;color:var(--teal);margin-bottom:0.2rem;}
+  .model-title{font-size:1.05rem;margin-bottom:0.65rem;}
+  .specs{list-style:none;font-size:0.85rem;color:var(--muted);margin-bottom:1.1rem;}
+  .specs li{padding-left:0.9rem;position:relative;margin-bottom:0.3rem;}
+  .specs li::before{content:"–";position:absolute;left:0;color:var(--copper);}
+  .card-footer{margin-top:auto;display:flex;align-items:center;justify-content:space-between;border-top:1px solid var(--line);padding-top:0.85rem;}
+  .card-footer .price{font-size:0.85rem;color:var(--muted);}
+  .btn-sm{padding:0.45rem 0.85rem;font-size:0.78rem;}
+
+  .trust{background:var(--ink);color:#eef4f2;}
+  .trust h2{color:#fff;}
+  .trust .section-head p{color:#b8ccc6;}
+  .trust-grid{display:grid;grid-template-columns:1fr;gap:1.3rem;}
+  @media(min-width:640px){.trust-grid{grid-template-columns:repeat(3,1fr);}}
+  .trust-card{border:1px solid #2a4640;border-radius:10px;padding:1.2rem;}
+  .trust-card b{display:block;font-family:'Space Grotesk',sans-serif;font-size:1.6rem;margin-bottom:0.2rem;}
+  .trust-card span{font-size:0.85rem;color:#a9c1ba;}
+
+  .contact-grid{display:grid;grid-template-columns:1fr;gap:2rem;}
+  @media(min-width:860px){.contact-grid{grid-template-columns:1fr 1.15fr;}}
+  .contact-info .info-row{display:flex;gap:0.8rem;padding:0.85rem 0;border-bottom:1px solid var(--line);}
+  .contact-info .info-row:first-child{padding-top:0;}
+  .contact-info svg{width:20px;height:20px;flex-shrink:0;color:var(--teal);margin-top:0.15rem;}
+  .contact-info b{display:block;font-size:0.9rem;}
+  .contact-info span{font-size:0.86rem;color:var(--muted);}
+
+  form{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:1.6rem;}
+  .field{margin-bottom:1.05rem;}
+  .field label{display:block;font-size:0.82rem;font-weight:600;margin-bottom:0.35rem;}
+  .field input,.field select,.field textarea{width:100%;padding:0.65rem 0.75rem;border:1px solid var(--line);border-radius:7px;font-family:'Inter',sans-serif;font-size:0.92rem;background:#fbfdfc;color:var(--ink);}
+  .field input:focus,.field select:focus,.field textarea:focus{border-color:var(--teal);}
+  .two-col{display:grid;grid-template-columns:1fr;gap:1rem;}
+  @media(min-width:520px){.two-col{grid-template-columns:1fr 1fr;}}
+  .form-actions{display:flex;flex-wrap:wrap;gap:0.7rem;align-items:center;margin-top:0.3rem;}
+  .form-note{font-size:0.78rem;color:var(--muted);margin-top:0.8rem;}
+  #form-status{font-size:0.85rem;margin-top:0.6rem;color:var(--teal-deep);}
+
+  footer{border-top:1px solid var(--line);padding:2.4rem 0 6.5rem;font-size:0.85rem;color:var(--muted);}
+  .footer-grid{display:flex;flex-wrap:wrap;justify-content:space-between;gap:1.5rem;}
+  footer strong{color:var(--ink);}
+
+  .float-wa{position:fixed;bottom:1.1rem;right:1.1rem;z-index:80;background:#1f8a5f;color:#fff;padding:0.75rem 1.1rem;border-radius:50px;font-size:0.85rem;font-weight:600;text-decoration:none;display:flex;align-items:center;gap:0.5rem;box-shadow:0 6px 18px rgba(15,60,45,0.28);}
+
+  @media (prefers-reduced-motion: reduce){html{scroll-behavior:auto;} .btn{transition:none;}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a href="#top" class="brand">
+      <svg class="brand-mark" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M16 3C16 3 6 14.5 6 20.5C6 26 10.5 29 16 29C21.5 29 26 26 26 20.5C26 14.5 16 3 16 3Z" fill="#0b6e5f"/>
+        <path d="M11 21C11 24 13 26 16 26" stroke="#f4f7f5" stroke-width="1.6" stroke-linecap="round"/>
+      </svg>
+      Honest Aqua
+    </a>
+    <div class="nav-actions">
+      <a class="btn btn-line" href="tel:+919104256826">Call</a>
+      <a class="btn btn-solid" href="https://wa.me/919104256826" target="_blank" rel="noopener">WhatsApp</a>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div>
+        <p class="eyebrow-note">RO · UV · Alkaline · Copper purifiers — Vadodara</p>
+        <h1>Water purifiers, sold, fitted and kept running.</h1>
+        <p class="lede">Genuine spare parts, booster pumps, membranes and full-unit sales for every domestic and industrial RO, UV, alkaline, copper and TDS-control machine — with technicians who actually turn up.</p>
+        <div class="hero-ctas">
+          <a class="btn btn-solid" href="#contact">Book a service</a>
+          <a class="btn btn-line" href="#catalog">See products</a>
+        </div>
+        <div class="stat-row">
+          <div class="stat"><b class="mono">₹200</b><span>standard service visit</span></div>
+          <div class="stat"><b class="mono">Pan-India</b><span>spare parts &amp; machine delivery</span></div>
+          <div class="stat"><b class="mono">AMC</b><span>annual contracts available</span></div>
+        </div>
+      </div>
+
+      <div class="hero-photo">
+        <img src="images/lexcru-lxtwo-cabinet.jpg" alt="Wall-mounted RO purifier cabinet" />
+        <div class="cap"><b>Built to be serviced, not replaced</b>Every unit we sell is backed by our own repair &amp; AMC team.</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="services">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">What we do</p>
+        <h2>Sales, service and spare parts — under one roof</h2>
+      </div>
+      <div class="service-grid">
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3C12 3 5 12 5 16.5C5 20.6 8.1 23 12 23C15.9 23 19 20.6 19 16.5C19 12 12 3 12 3Z"/></svg>
+          <h3>New purifier sales</h3>
+          <p>Domestic and industrial RO, RO+UV, alkaline, copper and TDS-control units, fitted and commissioned on-site.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M14.7 6.3a4 4 0 0 0-5.66 5.66L3 18l3 3 6.04-6.04a4 4 0 0 0 5.66-5.66l-2.5 2.5-2-2 2.5-2.5z"/></svg>
+          <h3>Repairs &amp; seal replacement</h3>
+          <p>All RO spare parts kept in stock, sold at wholesale price for both individual repairs and dealers.</p>
+          <span class="tag">₹200 / visit</span>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <h3>Annual maintenance contracts</h3>
+          <p>Scheduled filter changes and check-ups through the year, so you never have to remember to call us.</p>
+        </div>
+        <div class="service-card">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M3 7l9-4 9 4-9 4-9-4z"/><path d="M3 7v10l9 4 9-4V7"/></svg>
+          <h3>Pan-India delivery</h3>
+          <p>New machines and spare parts shipped anywhere in India — for households, dealers and technicians alike.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="catalog">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker">Products</p>
+        <h2>Purifiers, pumps, membranes &amp; filters</h2>
+        <p>Everything below is stock we actually carry — tap a filter to browse by category, or WhatsApp us for anything not listed.</p>
+      </div>
+
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="purifier">Purifiers</button>
+        <button class="filter-tab" data-filter="pump">Booster pumps</button>
+        <button class="filter-tab" data-filter="filter">Filters &amp; cartridges</button>
+        <button class="filter-tab" data-filter="part">Membranes &amp; parts</button>
+      </div>
+
+      <div class="grid" id="product-grid">
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">FOREST BLUE</span><img src="images/aquaera-forest-blue.jpg" alt="Aqua ERA Forest Blue purifier" /></div>
+          <div class="card-body">
+            <span class="series-name">Aqua ERA Elite</span>
+            <h3 class="model-title">Forest Blue</h3>
+            <ul class="specs">
+              <li>9-litre internal storage tank</li>
+              <li>Ribbed acrylic front guard</li>
+              <li>Multi-stage RO + UV purification</li>
+            </ul>
+            <div class="card-footer"><span class="price">Full unit</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20Aqua%20ERA%20Forest%20Blue%20purifier." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">URBAN GREY</span><img src="images/aquaera-urban-grey.jpg" alt="Aqua ERA Urban Grey purifier" /></div>
+          <div class="card-body">
+            <span class="series-name">Aqua ERA Elite</span>
+            <h3 class="model-title">Urban Grey</h3>
+            <ul class="specs">
+              <li>9-litre storage reservoir</li>
+              <li>Matte graphite exterior</li>
+              <li>LED status indicators</li>
+            </ul>
+            <div class="card-footer"><span class="price">Full unit</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20Aqua%20ERA%20Urban%20Grey%20purifier." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">SILK BLUE</span><img src="images/aquaera-silk-blue.jpg" alt="Aqua ERA Silk Blue purifier" /></div>
+          <div class="card-body">
+            <span class="series-name">Aqua ERA Silk</span>
+            <h3 class="model-title">Silk Blue</h3>
+            <ul class="specs">
+              <li>9-litre high-capacity storage</li>
+              <li>Smooth sky-blue matte finish</li>
+              <li>Push-lever dispense spout</li>
+            </ul>
+            <div class="card-footer"><span class="price">Full unit</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20Aqua%20ERA%20Silk%20Blue%20purifier." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">AI QUA</span><img src="images/aiqua-ro-system.jpg" alt="AI Qua White RO System" /></div>
+          <div class="card-body">
+            <span class="series-name">Organic Series</span>
+            <h3 class="model-title">AI Qua White RO System</h3>
+            <ul class="specs">
+              <li>RO + UV + UF + alkaline + copper + zinc + TDS</li>
+              <li>10-litre storage tank</li>
+              <li>Smart LED indicator, retains essential minerals</li>
+            </ul>
+            <div class="card-footer"><span class="price">Full unit</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20AI%20Qua%20White%20RO%20System." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">CABINET RO</span><img src="images/lexcru-lxtwo-cabinet.jpg" alt="Lexcru LX Two purifier cabinet" /></div>
+          <div class="card-body">
+            <span class="series-name">Lexcru</span>
+            <h3 class="model-title">LX Two Cabinet</h3>
+            <ul class="specs">
+              <li>Reinforced internal cabinet build</li>
+              <li>Illuminated dispense window</li>
+              <li>Compact under-counter footprint</li>
+            </ul>
+            <div class="card-footer"><span class="price">Full unit</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20Lexcru%20LX%20Two%20purifier." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="purifier">
+          <div class="card-visual"><span class="swatch-tag">WHOLE-HOUSE</span><img src="images/lexcru-whole-house-system.jpg" alt="Lexcru whole-house sediment and softener system" /></div>
+          <div class="card-body">
+            <span class="series-name">Lexcru</span>
+            <h3 class="model-title">Whole-House Filtration System</h3>
+            <ul class="specs">
+              <li>Large-capacity sediment / softener vessel</li>
+              <li>Digital control valve with pressure gauge</li>
+              <li>For borewell, industrial &amp; society supply</li>
+            </ul>
+            <div class="card-footer"><span class="price">On request</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20a%20quote%20on%20the%20whole-house%20filtration%20system." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="pump">
+          <div class="card-visual"><span class="swatch-tag">MINI-80</span><img src="images/lexcru-mini-booster-pump.jpg" alt="Lexcru Mini push-fit booster pump" /></div>
+          <div class="card-body">
+            <span class="series-name">Lexcru</span>
+            <h3 class="model-title">Mini Push-Fit Booster Pump</h3>
+            <ul class="specs">
+              <li>75 GPD, 24V DC, PMDC ball-bearing motor</li>
+              <li>Output flow 45–55 LPH at 75 PSI</li>
+              <li>1/4" BSP port, 3-chamber diaphragm design</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27m%20interested%20in%20the%20Lexcru%20Mini%2080%20GPD%20booster%20pump." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="pump">
+          <div class="card-visual"><span class="swatch-tag">CRUZE RANGE</span><img src="images/cruze-booster-pump-range.jpg" alt="Cruze booster pump range - Pixel, Nano, Gold, Mercury" /></div>
+          <div class="card-body">
+            <span class="series-name">Cruze</span>
+            <h3 class="model-title">Booster Pump Range</h3>
+            <ul class="specs">
+              <li>Pixel-100 · Nano-100 · Gold-100 · Mercury-100</li>
+              <li>Multiple flow &amp; pressure ratings in stock</li>
+              <li>Direct replacement for most domestic ROs</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%20Cruze%20booster%20pump%20range." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="filter">
+          <div class="card-visual"><span class="swatch-tag">LEO 8"</span><img src="images/leo-filter-cartridges.jpg" alt="Lexcru LEO pre-carbon, sediment and post-carbon filter cartridges" /></div>
+          <div class="card-body">
+            <span class="series-name">Lexcru LEO</span>
+            <h3 class="model-title">8" Filter Cartridge Set</h3>
+            <ul class="specs">
+              <li>Pre-carbon (600 IV) — removes chlorine &amp; VOCs</li>
+              <li>Sediment (5 micron) — clears dirt &amp; rust</li>
+              <li>Post-carbon (1000 IV + mineral) — final polish</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%20Lexcru%20LEO%208%22%20filter%20cartridge%20set." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="filter">
+          <div class="card-visual"><span class="swatch-tag">CARBON BLOCK</span><img src="images/carbon-block-filter.jpg" alt="Cruze AC cartridge and carbon block filter" /></div>
+          <div class="card-body">
+            <span class="series-name">Cruze</span>
+            <h3 class="model-title">AC Cartridge &amp; Carbon Block Filter</h3>
+            <ul class="specs">
+              <li>Chlorine, taste &amp; odour reduction</li>
+              <li>Standard 10" housing fit</li>
+              <li>Recommended change: every 6 months</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%20Cruze%20carbon%20block%20filter." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="filter">
+          <div class="card-visual"><span class="swatch-tag">INLINE KIT</span><img src="images/cruze-inline-filter-kit.jpg" alt="Cruze square inline filter kit" /></div>
+          <div class="card-body">
+            <span class="series-name">Cruze</span>
+            <h3 class="model-title">Square Inline Kit</h3>
+            <ul class="specs">
+              <li>3 inline filters + 1 spun filter (160 gms)</li>
+              <li>Also available with alkaline filter or concealed membrane</li>
+              <li>Complete cartridge replacement kit</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%20Cruze%20square%20inline%20filter%20kit." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="filter">
+          <div class="card-visual"><span class="swatch-tag">SPUN</span><img src="images/spun-sediment-filter.jpg" alt="Spun sediment filter cartridge" /></div>
+          <div class="card-body">
+            <span class="series-name">Aquasfilter</span>
+            <h3 class="model-title">Spun Sediment Filter</h3>
+            <ul class="specs">
+              <li>Removes dirt &amp; rust from incoming water</li>
+              <li>Available in 90gm / 100gm / 110gm</li>
+              <li>First-stage filter for every RO</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20spun%20sediment%20filters." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="part">
+          <div class="card-visual"><span class="swatch-tag">80 GPD</span><img src="images/ro-membrane-80gpd.jpg" alt="Psyclone RO membrane 80 GPD" /></div>
+          <div class="card-body">
+            <span class="series-name">Psyclone</span>
+            <h3 class="model-title">RO Membrane — 80 GPD</h3>
+            <ul class="specs">
+              <li>High-flow, high-TDS reverse osmosis element</li>
+              <li>Direct fit for most domestic RO units</li>
+              <li>5-star premium quality rating</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%2080%20GPD%20RO%20membrane." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="part">
+          <div class="card-visual"><span class="swatch-tag">CONCEALED</span><img src="images/concealed-membrane.jpg" alt="Lexcru LEO concealed membrane" /></div>
+          <div class="card-body">
+            <span class="series-name">Lexcru LEO</span>
+            <h3 class="model-title">Concealed Membrane</h3>
+            <ul class="specs">
+              <li>Removes dissolved heavy metals, bacteria &amp; virus</li>
+              <li>Semi-permeable RO filtration element</li>
+              <li>Sealed &amp; scratch-verified genuine part</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%20Lexcru%20LEO%20concealed%20membrane." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="part">
+          <div class="card-visual"><span class="swatch-tag">HOUSING</span><img src="images/membrane-housing.jpg" alt="Membrane housing and end caps" /></div>
+          <div class="card-body">
+            <span class="series-name">Universal</span>
+            <h3 class="model-title">Membrane Housing &amp; Caps</h3>
+            <ul class="specs">
+              <li>Standard membrane vessel with end caps</li>
+              <li>Push-fit inlet/outlet fittings</li>
+              <li>Replacement housing for older units</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20membrane%20housings." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+        <div class="card" data-cat="part">
+          <div class="card-visual"><span class="swatch-tag">3.5A SMPS</span><img src="images/smps-power-supply.jpg" alt="Psyclone 3.5 amp SMPS power supply" /></div>
+          <div class="card-body">
+            <span class="series-name">Psyclone</span>
+            <h3 class="model-title">3.5 Amp SMPS Power Supply</h3>
+            <ul class="specs">
+              <li>Input 180–280 VAC, output 24V 3.5A DC</li>
+              <li>Indoor use, standard RO adapter replacement</li>
+              <li>Fits most booster-pump driven units</li>
+            </ul>
+            <div class="card-footer"><span class="price">Wholesale price</span><a class="btn btn-solid btn-sm" href="https://wa.me/919104256826?text=Hi%2C%20I%27d%20like%20pricing%20on%20the%203.5%20Amp%20SMPS%20power%20supply." target="_blank" rel="noopener">Inquire</a></div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <section class="trust">
+    <div class="wrap">
+      <div class="section-head">
+        <p class="kicker" style="color:#8ef0c4;">Why Honest Aqua</p>
+        <h2>Built for people who just want their water working</h2>
+        <p>No upsell scripts — a straight service visit, a fair spare-parts price, and a technician who explains what he replaced and why.</p>
+      </div>
+      <div class="trust-grid">
+        <div class="trust-card"><b class="mono">₹200</b><span>flat service-visit charge, before any parts</span></div>
+        <div class="trust-card"><b class="mono">All models</b><span>RO, UV, alkaline, copper &amp; TDS-control units serviced</span></div>
+        <div class="trust-card"><b class="mono">Nationwide</b><span>spare parts and new machines delivered anywhere in India</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact">
+    <div class="wrap contact-grid">
+      <div class="contact-info">
+        <p class="kicker">Get in touch</p>
+        <h2 style="margin-bottom:1.1rem;">Tell us what's wrong with your water</h2>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6 19.8 19.8 0 0 1-3.1-8.7A2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.3 1.8.6 2.7a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.4-1.4a2 2 0 0 1 2.1-.5c.9.3 1.8.5 2.7.6a2 2 0 0 1 1.8 2z"/></svg>
+          <div><b>Call or WhatsApp</b><span>9104256826 &nbsp;/&nbsp; 9106695508</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M22 6l-10 7L2 6"/><rect x="2" y="4" width="20" height="16" rx="2"/></svg>
+          <div><b>Email</b><span>abasitkadiwala8866@gmail.com</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 21s-7-6.1-7-11a7 7 0 0 1 14 0c0 4.9-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          <div><b>Workshop address</b><span>FF/3, Magnum Plaza, near Kismat Chokdi, Tandalja, Vadodara</span></div>
+        </div>
+        <div class="info-row">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="3" y="4" width="18" height="17" rx="2"/><path d="M3 9h18M8 2v4M16 2v4"/></svg>
+          <div><b>Hours</b><span>Open daily · service visits scheduled same or next day</span></div>
+        </div>
+      </div>
+
+      <form id="lead-form">
+        <div class="two-col">
+          <div class="field"><label for="name">Your name</label><input id="name" name="name" type="text" required /></div>
+          <div class="field"><label for="phone">Phone number</label><input id="phone" name="phone" type="tel" required /></div>
+        </div>
+        <div class="field">
+          <label for="service">What do you need</label>
+          <select id="service" name="service">
+            <option>New purifier installation</option>
+            <option>Repair / seal replacement</option>
+            <option>Annual maintenance contract (AMC)</option>
+            <option>Spare parts — wholesale</option>
+            <option>Something else</option>
+          </select>
+        </div>
+        <div class="field"><label for="address">Area / address</label><input id="address" name="address" type="text" placeholder="e.g. Tandalja, Vadodara" /></div>
+        <div class="field"><label for="message">Message</label><textarea id="message" name="message" rows="3" placeholder="Tell us the make of your purifier and what's wrong, if anything"></textarea></div>
+        <div class="form-actions">
+          <button type="submit" class="btn btn-solid">Send on WhatsApp</button>
+          <a id="email-fallback" class="btn btn-line" href="#">Send by email instead</a>
+        </div>
+        <p class="form-note">Sending on WhatsApp opens a chat to 9104256826 with your details already filled in — nothing is sent automatically until you press send there.</p>
+        <p id="form-status" role="status"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="wrap footer-grid">
+    <div>
+      <p><strong>Honest Aqua Seals &amp; Service</strong></p>
+      <p>Domestic &amp; industrial RO, UV, alkaline and copper purifiers — sales, service, AMC and spare parts.</p>
+    </div>
+    <div>
+      <p>FF/3, Magnum Plaza, near Kismat Chokdi, Tandalja, Vadodara</p>
+      <p>9104256826 · 9106695508 · abasitkadiwala8866@gmail.com</p>
+    </div>
+  </div>
+</footer>
+
+<a class="float-wa" href="https://wa.me/919104256826" target="_blank" rel="noopener">
+  <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M20.5 3.5A11 11 0 0 0 3.2 17.4L2 22l4.7-1.2A11 11 0 1 0 20.5 3.5zM12 20a8.9 8.9 0 0 1-4.5-1.2l-.3-.2-3.2.8.9-3.1-.2-.3A8.9 8.9 0 1 1 12 20z"/></svg>
+  Chat with us
+</a>
+
+<script>
+  // category filter
+  const tabs = document.querySelectorAll('.filter-tab');
+  const cards = document.querySelectorAll('#product-grid .card');
+  tabs.forEach(tab=>{
+    tab.addEventListener('click', ()=>{
+      tabs.forEach(t=>t.classList.remove('active'));
+      tab.classList.add('active');
+      const f = tab.dataset.filter;
+      cards.forEach(c=>{
+        c.style.display = (f==='all' || c.dataset.cat===f) ? '' : 'none';
+      });
+    });
+  });
+
+  // lead form -> WhatsApp / email auto-message
+  const form = document.getElementById('lead-form');
+  const status = document.getElementById('form-status');
+  const emailFallback = document.getElementById('email-fallback');
+  const BUSINESS_WA = '919104256826';
+  const BUSINESS_EMAIL = 'abasitkadiwala8866@gmail.com';
+
+  function buildMessage(data){
+    return [
+      'Hi Honest Aqua, I would like to get in touch.',
+      '',
+      'Name: ' + data.name,
+      'Phone: ' + data.phone,
+      'Service needed: ' + data.service,
+      data.address ? 'Area: ' + data.address : null,
+      data.message ? 'Message: ' + data.message : null
+    ].filter(Boolean).join('\n');
+  }
+
+  function currentData(){
+    return {
+      name: document.getElementById('name').value.trim(),
+      phone: document.getElementById('phone').value.trim(),
+      service: document.getElementById('service').value,
+      address: document.getElementById('address').value.trim(),
+      message: document.getElementById('message').value.trim()
+    };
+  }
+
+  function refreshEmailLink(){
+    const data = currentData();
+    const body = buildMessage(data);
+    emailFallback.href = 'mailto:' + BUSINESS_EMAIL +
+      '?subject=' + encodeURIComponent('RO service enquiry — ' + (data.name || 'website')) +
+      '&body=' + encodeURIComponent(body);
+  }
+  form.addEventListener('input', refreshEmailLink);
+  refreshEmailLink();
+
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    const data = currentData();
+    if(!data.name || !data.phone){
+      status.textContent = 'Please add your name and phone number.';
+      return;
+    }
+    const text = encodeURIComponent(buildMessage(data));
+    status.textContent = 'Opening WhatsApp with your details filled in…';
+    window.open('https://wa.me/' + BUSINESS_WA + '?text=' + text, '_blank');
+  });
+</script>
+
+</body>
+</html>
